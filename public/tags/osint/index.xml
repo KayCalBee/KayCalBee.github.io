@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSINT on Antonio Ortiz</title>
+    <link>https://kaycalbee.github.io/tags/osint/</link>
+    <description>Recent content in OSINT on Antonio Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kaycalbee.github.io/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OhSINT</title>
+      <link>https://kaycalbee.github.io/writeups/ohsint/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaycalbee.github.io/writeups/ohsint/</guid>
+      <description>&lt;h1 id=&#34;ohsint&#34;&gt;OhSINT&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;http://tryhackme.com/room/ohsint&#34;&gt;OhSINT&lt;/a&gt;, a room meant to test your skills using the OSINT framework.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

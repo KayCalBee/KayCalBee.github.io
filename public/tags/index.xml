@@ -2,26 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Antonio Ortiz</title>
-    <link>http://example.org/tags/</link>
+    <link>https://kaycalbee.github.io/tags/</link>
     <description>Recent content in Tags on Antonio Ortiz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Dec 2022 11:34:45 -0800</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaycalbee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CTF</title>
-      <link>http://example.org/tags/ctf/</link>
-      <pubDate>Tue, 20 Dec 2022 11:34:45 -0800</pubDate>
+      <link>https://kaycalbee.github.io/tags/ctf/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/tags/ctf/</guid>
+      <guid>https://kaycalbee.github.io/tags/ctf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tryhackme</title>
-      <link>http://example.org/tags/tryhackme/</link>
-      <pubDate>Tue, 20 Dec 2022 11:34:45 -0800</pubDate>
+      <link>https://kaycalbee.github.io/tags/tryhackme/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/tags/tryhackme/</guid>
+      <guid>https://kaycalbee.github.io/tags/tryhackme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://kaycalbee.github.io/tags/writeup/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaycalbee.github.io/tags/writeup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPress</title>
+      <link>https://kaycalbee.github.io/tags/wordpress/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaycalbee.github.io/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSINT</title>
+      <link>https://kaycalbee.github.io/tags/osint/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaycalbee.github.io/tags/osint/</guid>
       <description></description>
     </item>
     

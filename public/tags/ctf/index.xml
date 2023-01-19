@@ -2,21 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CTF on Antonio Ortiz</title>
-    <link>http://example.org/tags/ctf/</link>
+    <link>https://kaycalbee.github.io/tags/ctf/</link>
     <description>Recent content in CTF on Antonio Ortiz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Dec 2022 11:34:45 -0800</lastBuildDate><atom:link href="http://example.org/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://kaycalbee.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>RootMeCTF</title>
-      <link>http://example.org/writeups/rootmewriteup/</link>
+      <title>Agent Sudo</title>
+      <link>https://kaycalbee.github.io/writeups/agentsudo/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaycalbee.github.io/writeups/agentsudo/</guid>
+      <description>Agent Sudo You found a secret server located under the deep sea. Your task is to hack inside the server and reveal the truth.
+Agent Sudo, a CTF room with an alien theme!
+As always, we&amp;rsquo;ll start with adding the target machine&amp;rsquo;s IP address to our hosts file.
+echo target-ip agentsudo.thm &amp;gt;&amp;gt; /etc/hosts Now lets move on to the room&amp;rsquo;s tasks.
+Enumerate We&amp;rsquo;ll start by running an nmap scan of the target.</description>
+    </item>
+    
+    <item>
+      <title>RootMe</title>
+      <link>https://kaycalbee.github.io/writeups/rootme/</link>
       <pubDate>Tue, 20 Dec 2022 11:34:45 -0800</pubDate>
       
-      <guid>http://example.org/writeups/rootmewriteup/</guid>
-      <description>RootMe CTF Here&amp;rsquo;s a Link to the room.
+      <guid>https://kaycalbee.github.io/writeups/rootme/</guid>
+      <description>RootMe A ctf for beginners, can you root me?
+Here&amp;rsquo;s a Link to the room.
 First, I&amp;rsquo;m going to add the ip address of the machine to my /etc/hosts folder for ease of access.
 echo target-ip rootme &amp;gt;&amp;gt; /etc/hosts Next, it&amp;rsquo;s time for some reconnaissance.
-Reconnaissance nmap -sC -sV -T4 -oN nmap.txt rootme Starting Nmap 7.60 ( https://nmap.org ) at 2022-12-20 21:29 GMT Nmap scan report for rootme (10.10.24.110) Host is up (0.050s latency). Not shown: 932 closed ports, 66 filtered ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.</description>
+Reconnaissance nmap -sC -sV -T4 -oN nmap.txt rootme Starting Nmap 7.60 ( https://nmap.org ) at 2022-12-20 21:29 GMT Nmap scan report for rootme (10.10.24.110) Host is up (0.</description>
+    </item>
+    
+    <item>
+      <title>Overpass</title>
+      <link>https://kaycalbee.github.io/writeups/overpass/</link>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaycalbee.github.io/writeups/overpass/</guid>
+      <description>Overpass What happens when some broke CompSci students make a password manager?
+A CTF room where we will be exploiting a web based password manager.
+The targets in this room are:
+user.txt root.txt We&amp;rsquo;ll start, as always, by adding the target&amp;rsquo;s ip address to our hosts file.
+echo target-ip overpass.thm &amp;gt;&amp;gt; /etc/hosts Recon Next, we&amp;rsquo;ll run an nmap scan of the server.
+nmap -sC -sV -T4 overpass.thm Starting Nmap 7.93 ( https://nmap.</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://kaycalbee.github.io/writeups/blog/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaycalbee.github.io/writeups/blog/</guid>
+      <description>Blog Billy Joel made a WordPress Blog!
+Blog, a CTF room based around exploiting a WordPress blog!
+We&amp;rsquo;ll start by adding the machine&amp;rsquo;s ip address to our hosts file.
+echo target-ip blog.thm &amp;gt;&amp;gt; /etc/hosts And then move on to some reconnaissance.
+Recon First we&amp;rsquo;ll run an nmap scan of the target, using nmap&amp;rsquo;s &amp;ldquo;default&amp;rdquo; scripts (-sC) and version scanner (-sV).
+nmap -sC -sV -T4 blog.thm Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-05 02:16 EST Nmap scan report for blog.</description>
     </item>
     
   </channel>

