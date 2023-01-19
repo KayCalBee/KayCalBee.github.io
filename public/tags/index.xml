@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Antonio Ortiz</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on Antonio Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Dec 2022 11:34:45 -0800</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTF</title>
+      <link>http://example.org/tags/ctf/</link>
+      <pubDate>Tue, 20 Dec 2022 11:34:45 -0800</pubDate>
+      
+      <guid>http://example.org/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tryhackme</title>
+      <link>http://example.org/tags/tryhackme/</link>
+      <pubDate>Tue, 20 Dec 2022 11:34:45 -0800</pubDate>
+      
+      <guid>http://example.org/tags/tryhackme/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

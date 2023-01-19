@@ -1,0 +1,60 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Antonio Ortiz'
+author = 'Antonio Ortiz'
+theme = 'm10c'
+
+[menu]
+
+  [[menu.main]]
+	identifier = "about"
+	name = "About"
+	url = "/about"
+
+  [[menu.main]]
+	identifier = "writeups"
+	name = "Writeups"
+	url = "/writeups/"
+
+  [[menu.main]]
+  	identifier = "tags"
+	name = "Tags"
+	url = "/tags/"
+
+  [[menu.main]]
+  	identifier = "music"
+	name = "Music"
+	url = "/music/"
+
+  [[menu.main]]
+  	identifier = "blog"
+	name = "Blog"
+	url = "/posts/"
+
+[params]
+  	author = "Antonio Ortiz"
+  	description = "Musician // Cyber Security Enthusiast // Designer"
+  	menu_item_separator = "-"
+	avatar = "me1.jpg"
+
+  [[params.social]]
+	icon = "github"
+	name = "Github"
+	url = "https://github.com/KayCalBee"
+
+  [[params.social]]
+  	icon = "twitter"
+	name = "Twitter"
+	url = "https://twitter.com"
+
+  [[params.social]]
+  	icon = "linkedin"
+	name = "Linkedin"
+	url = "https://www.linkedin.com/in/ADOrtiz95"
+
+  [params.style]
+  	darkestColor = "#080a09"
+  	darkColor = "#4c3948"
+  	lightColor = "#f5e3e0"
+  	lightestColor = "#f0f0f0"
+  	primaryColor = "#e996a8"

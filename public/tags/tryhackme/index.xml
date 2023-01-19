@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tryhackme on Antonio Ortiz</title>
+    <link>http://example.org/tags/tryhackme/</link>
+    <description>Recent content in tryhackme on Antonio Ortiz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Dec 2022 11:34:45 -0800</lastBuildDate><atom:link href="http://example.org/tags/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RootMeCTF</title>
+      <link>http://example.org/writeups/rootmewriteup/</link>
+      <pubDate>Tue, 20 Dec 2022 11:34:45 -0800</pubDate>
+      
+      <guid>http://example.org/writeups/rootmewriteup/</guid>
+      <description>RootMe CTF Here&amp;rsquo;s a Link to the room.
+First, I&amp;rsquo;m going to add the ip address of the machine to my /etc/hosts folder for ease of access.
+echo target-ip rootme &amp;gt;&amp;gt; /etc/hosts Next, it&amp;rsquo;s time for some reconnaissance.
+Reconnaissance nmap -sC -sV -T4 -oN nmap.txt rootme Starting Nmap 7.60 ( https://nmap.org ) at 2022-12-20 21:29 GMT Nmap scan report for rootme (10.10.24.110) Host is up (0.050s latency). Not shown: 932 closed ports, 66 filtered ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.</description>
+    </item>
+    
+  </channel>
+</rss>
