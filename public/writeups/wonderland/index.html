@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Wonderland // Antonio Ortiz</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.109.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Antonio Ortiz" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.461905bb1bfb5fe5b9233c724db5019724929afac3efc14c6b267a4f4a8c5c9a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wonderland"/>
+<meta name="twitter:description" content="Wonderland Enter Wonderland and capture the flags.
+Wonderland is an Alice in Wonderland themed CTF room!
+We&rsquo;ll start with adding the machine&rsquo;s IP to our hosts file.
+echo target-ip wonderland.thm &gt;&gt; /etc/hosts Recon nmap -sC -sV -T4 wonderland.thm Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-08 14:02 EST Nmap scan report for wonderland.thm (10.10.146.5) Host is up (0.20s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7."/>
+
+    <meta property="og:title" content="Wonderland" />
+<meta property="og:description" content="Wonderland Enter Wonderland and capture the flags.
+Wonderland is an Alice in Wonderland themed CTF room!
+We&rsquo;ll start with adding the machine&rsquo;s IP to our hosts file.
+echo target-ip wonderland.thm &gt;&gt; /etc/hosts Recon nmap -sC -sV -T4 wonderland.thm Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-08 14:02 EST Nmap scan report for wonderland.thm (10.10.146.5) Host is up (0.20s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaycalbee.github.io/writeups/wonderland/" /><meta property="article:section" content="writeups" />
+<meta property="article:published_time" content="2023-01-08T13:35:16-08:00" />
+<meta property="article:modified_time" content="2023-01-08T13:35:16-08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://kaycalbee.github.io/"><img class="app-header-avatar" src="/me1.jpg" alt="Antonio Ortiz" /></a>
+      <span class="app-header-title">Antonio Ortiz</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/about">About</a>
+            -
+          
+          <a class="app-header-menu-item" href="/posts/">Blog</a>
+            -
+          
+          <a class="app-header-menu-item" href="/music/">Music</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+            -
+          
+          <a class="app-header-menu-item" href="/writeups/">Writeups</a>
+      </nav>
+      <p>Musician // Cyber Security Enthusiast // Designer</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/KayCalBee" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://twitter.com" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>Twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/ADOrtiz95" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>Linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Wonderland</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 8, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://kaycalbee.github.io/tags/tryhackme/">tryhackme</a>
+              <a class="tag" href="https://kaycalbee.github.io/tags/ctf/">CTF</a>
+              <a class="tag" href="https://kaycalbee.github.io/tags/writeup/">Writeup</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="wonderland">Wonderland</h1>
+<figure><img src="/wonderland/wonderland.jpg" width="240px" height="240px"/><figcaption>
+            <p>Enter Wonderland and capture the flags.</p>
+        </figcaption>
+</figure>
+
+<hr>
+<p><a href="http://tryhackme.com/room/wonderland">Wonderland</a> is an Alice in Wonderland themed CTF room!</p>
+<p>We&rsquo;ll start with adding the machine&rsquo;s IP to our hosts file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo target-ip wonderland.thm &gt;&gt; /etc/hosts
+</span></span></code></pre></div><hr>
+<h3 id="recon">Recon</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sC -sV -T4 wonderland.thm
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Starting Nmap 7.93 <span style="color:#f92672">(</span> https://nmap.org <span style="color:#f92672">)</span> at 2023-01-08 14:02 EST
+</span></span><span style="display:flex;"><span>Nmap scan report <span style="color:#66d9ef">for</span> wonderland.thm <span style="color:#f92672">(</span>10.10.146.5<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Host is up <span style="color:#f92672">(</span>0.20s latency<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Not shown: <span style="color:#ae81ff">998</span> closed tcp ports <span style="color:#f92672">(</span>reset<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>PORT   STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 <span style="color:#f92672">(</span>Ubuntu Linux; protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>| ssh-hostkey: 
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">2048</span> 8eeefb96cead70dd05a93b0db071b863 <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|   <span style="color:#ae81ff">256</span> 7a927944164f204350a9a847e2c2be84 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_  <span style="color:#ae81ff">256</span> 000b8044e63d4b6947922c55147e2ac9 <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>80/tcp open  http    Golang net/http server <span style="color:#f92672">(</span>Go-IPFS json-rpc or InfluxDB API<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>|_http-title: Follow the white rabbit.
+</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span style="display:flex;"><span>Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</span> IP address <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> host up<span style="color:#f92672">)</span> scanned in 28.23 seconds
+</span></span></code></pre></div><figure><a href="/wonderland/wonderland.png"><img src="/wonderland/wonderland.png"/></a>
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dirbuster -H -l /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://wonderland.thm
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Starting OWASP DirBuster 1.0-RC1
+</span></span><span style="display:flex;"><span>Starting dir/file list based brute forcing
+</span></span><span style="display:flex;"><span>Dir found: / - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /img/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /r/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /r/a/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /r/a/b/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /r/a/b/b/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /r/a/b/b/i/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /r/a/b/b/i/t/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>Dir found: /poem/ - <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>DirBuster Stopped
+</span></span></code></pre></div><figure><a href="/wonderland/rabbit.png"><img src="/wonderland/rabbit.png"/></a>
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;Enter wonderland&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/main.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;Open the door and enter wonderland&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;&#34;Oh, you’re sure to do that,&#34; said the Cat, &#34;if you only walk long enough.&#34;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Alice felt that this could not be denied, so she tried another question. &#34;What sort of people live about here?&#34;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;&#34;In that direction,&#34;&#34; the Cat said, waving its right paw round, &#34;lives a Hatter: and in that direction,&#34; waving
+</span></span><span style="display:flex;"><span>        the other paw, &#34;lives a March Hare. Visit either you like: they’re both mad.&#34;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display: none;&#34;</span>&gt;alice:**********************************************&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/img/alice_door.png&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;height: 50rem;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span></code></pre></div><hr>
+<h3 id="user-flag">User Flag</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh alice@wonderland.thm
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
