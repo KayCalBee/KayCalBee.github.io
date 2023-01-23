@@ -2,16 +2,18 @@
 title: Wonderland
 date: 2023-01-08T13:35:16-08:00
 draft: true
-tags: ['tryhackme', 'CTF', 'Writeup']
+tags: ['tryhackme', 'CTF', 'Writeup', 'gobuster', 'ghidra']
 ---
 
-# Wonderland
-
 {{< figure src="/wonderland/wonderland.jpg" width=240px height=240px attr="Enter Wonderland and capture the flags." >}}
+
+## Intro
 
 ___
 
 [Wonderland](http://tryhackme.com/room/wonderland) is an Alice in Wonderland themed CTF room!
+
+There's a focus on library and executable hijacking, there'll be links to further reading on both these subjects at the end of this writeup.
 
 We'll start with adding the machine's IP to our hosts file.
 
@@ -19,11 +21,11 @@ We'll start with adding the machine's IP to our hosts file.
 echo target-ip wonderland.thm >> /etc/hosts
 ```
 
-
+## Recon
 
 ___
 
-### Recon
+### 
 
 ``` bash
 nmap -sC -sV -T4 wonderland.thm
@@ -94,15 +96,26 @@ DirBuster Stopped
 ```
 
 
+## User.txt
 
 ___
 
-### User Flag
-
+### Gaining a Foothold
 
 
 ``` bash
 ssh alice@wonderland.thm
 ```
 
+## Root.txt
+
+___
+
+### Privilege Escalation
+
+## Success!
+
+___
+
+Success! We've found both Wonderland flags!
 

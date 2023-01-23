@@ -5,10 +5,9 @@ tags: ['CTF', 'tryhackme', 'WordPress', 'Writeup']
 draft: false
 ---
 
-# Blog
-
-
 {{< figure src="/blog/blog.png" height="240px" width="240px" attr="Billy Joel made a WordPress Blog!" >}}
+
+## Intro
 
 ___
 
@@ -22,9 +21,11 @@ echo target-ip blog.thm >> /etc/hosts
 
 And then move on to some reconnaissance.
 
+## Recon
+
 ___
 
-### Recon
+### Information Gathering
 
 First we'll run an nmap scan of the target, using nmap's "default" scripts (-sC) and version scanner (-sV).
 
@@ -235,11 +236,13 @@ wpscan --url blog.thm -U kwheel -P /usr/share/wordlists/rockyou.txt --password-a
 
 About a minute and a half later, we should have Kelly's password.
 
+## User.txt
+
 ___
 
 ### Exploitation
 
-The [exploit](https://www.exploit-db.com/exploits/46662) we found earlier is actually a Metasploit module sp we'll open the Metasploit console with:
+The [exploit](https://www.exploit-db.com/exploits/46662) we found earlier is actually a Metasploit module so we'll open the Metasploit console with:
 
 ``` bash
 msfconsole -q
@@ -284,6 +287,8 @@ TRY HARDER
 ```
 
 Hmmm, that didn't work. Let's try escalating to root to find the real user flag.
+
+## Root.txt
 
 ___
 
@@ -354,8 +359,8 @@ find / -name root.txt 2>/dev/null
 cat /root/root.txt
 ```
 
-___
-
 ## Success!
+
+___
 
 That's it! We've captured both Blog flags!

@@ -11,6 +11,6 @@ ___
 
 ___
 
-> My [Resume]()
+> My [Resume](/resume)
 
 

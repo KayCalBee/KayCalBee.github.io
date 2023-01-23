@@ -5,12 +5,12 @@ draft: false
 tags: ['tryhackme', 'CTF', 'Writeup' ]
 ---
 
-# Agent Sudo
 {{< figure src="/agentsudo/agents.png" width=240px height=240px attr="You found a secret server located under the deep sea. Your task is to hack inside the server and reveal the truth." >}}
 
+## Intro
 ___
 
-[Agent Sudo](http://tryhackme.com/room/agentsudoctf), a CTF room with an alien theme!  
+[Agent Sudo](http://tryhackme.com/room/agentsudoctf), a CTF room with an alien theme!
 
 As always, we'll start with adding the target machine's IP address to our hosts file.
 
@@ -20,6 +20,7 @@ echo target-ip agentsudo.thm >> /etc/hosts
 
 Now lets move on to the room's tasks.
 
+## Recon
 ___
 
 ### Enumerate
@@ -98,9 +99,10 @@ Which will answer the third question:
 > What is the agent name?  
 > *chris*.
 
+## Hash Cracking and Brute-Force
 ___
 
-### Hash Cracking and Brute-Force
+### FTP Server
 
 Now that we have a prospective username we can move on to cracking his ftp password.  
 We'll use Hydra and the rockyou list to do this.
@@ -308,6 +310,7 @@ Your buddy,
 chris
 ```
 
+## User.txt
 ___
 
 ### Capture the user flag
@@ -339,6 +342,7 @@ This is a pretty famous picture, and a quick reverse Google search will provide 
 > What is the incident of the photo called?  
 > *Roswell alien autopsy*.
 
+## Root.txt
 ___
 
 ### Privilege escalation
@@ -403,9 +407,9 @@ Your flag is
 By,
 DesKel a.k.a Agent R
 ```
-___
 
 ## Success!
+___
 
 We've found both flags! (And Agent R's real name!)
 If you search CVE for the string "sudo runas ALL" you'll find the number for the vulnerability. 
