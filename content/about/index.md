@@ -2,7 +2,7 @@
 title: About Me
 date: 2022-12-01
 
-draft: true
+draft: false
 ---
 
 ___
@@ -11,6 +11,6 @@ ___
 
 ___
 
-> My [Resume](/resume)
+> My [Résumé](/resume)
 
 

@@ -1,19 +1,18 @@
 ---
 title: Antonio Ortiz
-draft: true
+draft: false
 ---
 ##### [[kaycalbee.com](https://www.kaycalbee.com)] - [**antonioortiz@kaycalbee.com**] - [**(+1) 253-468-3738**]
 
-### Mission Statement - Something about finding a challenging workplace that fully utilizes our security based mindset.
+### To obtain a position where I can use my experience in the security and technology industries in an intellectually challenging and engaging environment.
 
 ## Significant Experience
 ___
 
-  * Most significant quantifiable career achievement.
-  * Accomplishment that positively impacted company.
-  * Achievement that supports objective.
-  * Second quantifiable achievement.
-  * Last accomplishment, achievement, or award.
+  * Conducted web app penetration testing and patched a $100,000 vulnerability for a local restaurant chain.
+  <!--- * Accomplishment that positively impacted company.
+  * Achievement that supports objective. --->
+  * Top 3% of [tryhackme](https://tryhackme.com/p/KayCalBee) users.
 
 ## Skills
 
@@ -31,8 +30,6 @@ ___
 **Linux**: Kali, Arch, Ubuntu, Debian, Gentoo  
 **Software**: Git, Nvim, Metasploit, Burpsuite, Ghidra, Nessus
 
-
-
 ## Job Experience
 
 ___
@@ -40,18 +37,19 @@ ___
 ### Security Officer, Holiday Inn Express and Suites
 February 2022 - September 2022, Tacoma, WA
 
-- Things you did/do here 
-- More things that you do here. 
+- Ensured that daily administrative documentation was kept concise and complete at all times.
+<!--- - More things that you do here.
+- New thing --->
 
-**Skills used:** Tell people about the languages, apps, technologies you used to succeed at this job. 
+**Skills and Technologies used:** Conflict resolution, CCTV, Microsoft Office
 
 ### Cyber Security Intern, FreshTechLLC
 2014-2016, Parkland, WA
 
-- This is the job you had before your latest job
-- Did you do anything that wasn't part of your job description, but you excelled at? 
+- Conducted black box penetration testing of web apps and network infrastructure.
+- Authored detailed vulnerability assessments categorized by severity level complete with steps for remediation.
 
-**Technologies used:** Systems building, Kali linux, MacOS, Windows 10, Windows Server 2008, Metasploit, Burpsuite, IOS, social engineering
+**Technologies used:** Systems building, Kali linux, MacOS, Windows 10, Windows Server 2008, Metasploit, Burpsuite, IOS
 
 ## Projects
 
@@ -59,15 +57,13 @@ ___
 
 **[*Personal Blog*](https://www.KayCalBee.com)** (2021-present)
 
-- Authored a series of articles covering a wide variety of topics and tools related to technology like PHP, WordPress, Ruby, Linux, Docker, and Privacy.
+- Authored a series of articles covering a wide variety of topics and tools related to technology and cyber security like Linux, Docker, Metasploit, Burpsuite, and CTF writeups.
 
 ## Education
 
 ___
 
-### Some, Pierce College 
+### High School Diploma, Spanaway Lake High School
+2009-2012, Spanaway WA
 
-- 4.0 GPA 
-- Deans List
-- Member of xyz club, etc. 
-- I didn't really go to college so I don't know what you would put here. 
+- President of the FIRST Robotics team, 2012.
